@@ -1,5 +1,6 @@
 .title-page__container{
   max-width: 320px;
+  min-width: 320px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -20,10 +21,110 @@
   border-left: 1px solid gray;
   border-right: 1px solid gray;
   color: white;
-  padding: 4px 2.5px;
+  padding: 4px 1.9px;
 }
 /***********************************************************
-                    @MEDIA
+                          MAIN
+***********************************************************/
+.main{
+
+}
+.both_nav{
+  background-color:  #ededed;
+  min-height:  280px;
+}
+.payments_line{
+  background-color:  #f7f7f7;
+  width: 100%;
+  height: 2.4%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.payments_img{
+  align-self: center;
+  max-width: 50vw;
+  padding-left: 15px;
+}
+.nav_both__container{
+  float: left;
+  display: flex;
+  padding: 1.5% 9.5%;
+}
+.both_nav_item{
+  padding: 0 10px;
+}
+.both_nav_link{
+  text-decoration: none;
+  font-family: Arial;
+  color:  #544e4d;
+  font-size: 12px;
+}
+.both__title{
+  font-family: Arial;
+  color:  #544e4d;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.16px;
+  line-height: 20px;
+}
+.socials{
+  padding: 0 4px;
+}
+.secure_img{
+  width: 167px;
+  padding-left: 30px;
+}
+/***********************************************************
+                        FOOTER
+***********************************************************/
+.footer{
+  height: 108px;
+  width: 100%;
+  background: black;
+}
+.footer *{
+  color: #8d8d8d;
+}
+.footer-menu__button{
+  background: none;
+  border: none;
+  color: white;
+  display: flex;
+  align-self: center;
+  height: 100%;
+  padding-left: 30px;
+  font-size: 30px;
+  float: left;
+}
+.footer-menu__list{
+  display: none;
+  align-items: center;
+  height: 100%;
+  padding-left: 2%;
+  float: left;
+}
+.footer-menu__item{
+  padding: 0 5px;
+  border-right: 1px solid #8d8d8d;
+  border-collapse: collapse;
+}
+.footer-menu__item:nth-child(5){
+  border: none;
+}
+.footer-menu__link{
+  text-decoration: none;
+  font-size: 12px;
+}
+.copyright{
+  float: right;
+  text-align: right;
+  display: grid;
+  padding: 35px 3%;
+  color: white;
+}
+/***********************************************************
+                        @MEDIA
 ***********************************************************/
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .title-page__container{
@@ -68,8 +169,14 @@
     float: right;
     padding-right: 2%;
   }
+  .footer-menu__button{
+    display: none;
+  }
+  .footer-menu__list{
+    display: flex;
+  }
 }
-@media screen and (min-width: 769px) and (max-width: 1200px){
+@media screen and (min-width: 769px) {
   .title-page__container{
     max-width: 1200px;
   }
@@ -95,6 +202,16 @@
   }
   .header__menu{
     float: right;
+    padding-right: 9.5%;
+  }
+  .footer-menu__button{
+    display: none;
+  }
+  .footer-menu__list{
+    display: flex;
+    padding-left: 9.5%;
+  }
+  .copyright{
     padding-right: 9.5%;
   }
 }

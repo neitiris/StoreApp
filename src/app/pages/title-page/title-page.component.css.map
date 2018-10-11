@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,sBAAsB;EACpB,KAAK,EAAE,KAAK;EACZ,QAAQ,EAAE,MAAM;;AAElB,WAAW;EACT,OAAO,EAAE,UAAU;;AAErB,aAAa;EACX,WAAW,EAAE,KAAK;EAClB,KAAK,EAAG,OAAO;EACf,SAAS,EAAE,MAAM;EACjB,cAAc,EAAE,OAAO;EACvB,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,MAAM",
+"sources": ["title-page.component.scss"],
+"names": [],
+"file": "title-page.component.css"
+}
