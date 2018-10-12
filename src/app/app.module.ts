@@ -7,11 +7,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ApproutingModule } from './approuter.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitlePageComponent
+    TitlePageComponent,
+    HomePageComponent
   ],
   imports: [
     FontAwesomeModule,

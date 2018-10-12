@@ -4,6 +4,10 @@ import * as pages from './pages/';
 
 const appRoutes: Routes = [
   { path: '', component: pages.TitlePageComponent, pathMatch: 'full' },
+  { path: '', component: pages.TitlePageComponent,
+    children: [
+      { path: 'home', component: pages.HomePageComponent },
+      ]}
 ];
 
 @NgModule({

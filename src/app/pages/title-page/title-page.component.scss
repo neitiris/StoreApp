@@ -51,6 +51,10 @@
   display: flex;
   padding: 1.5% 9.5%;
 }
+.both_nav_list{
+  min-width: 154px;
+  float: left;
+}
 .both_nav_item{
   padding: 0 10px;
 }
@@ -74,6 +78,7 @@
 .secure_img{
   width: 167px;
   padding-left: 30px;
+  height: 167px;
 }
 /***********************************************************
                         FOOTER
