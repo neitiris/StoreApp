@@ -7,13 +7,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ApproutingModule } from './approuter.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+import { HomePageComponent } from './pages';
+import { SliderComponent } from './components';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitlePageComponent,
-    HomePageComponent
+    HomePageComponent,
+    SliderComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -21,6 +24,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [ApproutingModule],
   bootstrap: [AppComponent]

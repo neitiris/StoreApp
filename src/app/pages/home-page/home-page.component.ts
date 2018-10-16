@@ -20,6 +20,11 @@ export class HomePageComponent implements OnInit {
   faTwitterIcon = faTwitter;
   faPinterestIcon = faPinterest;
   faCaretDownIcon = faCaretDown;
+  image_array = [
+    '../../../assets/slider-img.png',
+    '../../../assets/slider-img.png',
+    '../../../assets/slider-img.png',
+  ];
   constructor() { }
 
   ngOnInit() {

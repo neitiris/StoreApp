@@ -1,0 +1,70 @@
+#container{
+  position: relative;
+  overflow-x: hidden;
+  height: 435px;
+}
+#grid {
+  display: grid;
+  height: 12%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 350px;
+  grid-column-gap: 20px;
+  width: 305%;
+
+}
+.ng-star-inserted{
+  width: 100%;
+}
+
+#grid > div {
+  background-color: gray;
+}
+
+#slider-buttons-left{
+
+  position: absolute;
+  z-index: 1000;
+  top: 160px;
+  float: left;
+  cursor: pointer;
+  font-size: 250%;
+  color: #778899;
+  left: 0;
+  background: white;
+  height: 90px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider-buttons-right{
+  position: absolute;
+  top: 160px;
+  z-index: 1000;
+  float: right;
+  cursor: pointer;
+  font-size: 250%;
+  color: #778899;
+  right: 0;
+  background: white;
+  height: 90px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-cropper {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-cropper img {
+  height: 150%;
+  display: block;
+  margin: 0 auto;
+}

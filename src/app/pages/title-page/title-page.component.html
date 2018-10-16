@@ -29,13 +29,15 @@
           <h3 class="both__title">Socials</h3>
           <table>
             <tr *ngFor="let social of socials">
-              <td><a href="{{social.href}}"><img src="{{social.img}}" alt=""></a></td>
-              <td><a href="{{social.href2}}"><img src="{{social.img2}}" alt=""></a></td>
-              <td><a href="{{social.href3}}"><img src="{{social.img3}}" alt=""></a></td>
+              <td><a href="{{social.href}}"><img class="social_img" src="{{social.img}}" alt=""></a></td>
+              <td><a href="{{social.href2}}"><img class="social_img" src="{{social.img2}}" alt=""></a></td>
+              <td><a href="{{social.href3}}"><img class="social_img" src="{{social.img3}}" alt=""></a></td>
             </tr>
           </table>
         </div>
-        <img class="secure_img" src="../../../assets/secure.png" alt="">
+        <div class="secure_img" >
+          <img class="secure_img"  src="../../../assets/secure.png" alt="">
+        </div>
       </div>
     </div>
   </main>
