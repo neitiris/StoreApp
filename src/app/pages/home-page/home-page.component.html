@@ -2,6 +2,13 @@
   <header class="home_header">
     <div class="header_bucket-container">
       <img class="logo-img" src="../../../assets/logo.png" alt="">
+      <div class="header_drop-menu">
+        <button class="head-drop_btn">new <fa-icon [icon]="faCaretDownIcon"></fa-icon></button>
+        <button class="head-drop_btn">designers <fa-icon [icon]="faCaretDownIcon"></fa-icon></button>
+        <button class="head-drop_btn">women <fa-icon [icon]="faCaretDownIcon"></fa-icon></button>
+        <button class="head-drop_btn">man <fa-icon [icon]="faCaretDownIcon"></fa-icon></button>
+        <button class="head-drop_btn">clearance <fa-icon [icon]="faCaretDownIcon"></fa-icon></button>
+      </div>
       <div class="bucket_container">
         <select name="" id="" class="bucket_selector">
           <option value="">Your bucket</option>
@@ -18,32 +25,87 @@
     </button>
     <div class="slider-container">
       <app-slider [images]="image_array"></app-slider>
+      <div class="big-slider_items">
+        <ul class="big-slider-list">
+          <li class="big-slider__item" *ngFor="let button of big-slider_buttons" >
+            <input class="big-slider__radio" type="radio" name="big-slider_radio" id="{{button.sort}}" [checked]="button.checked">
+            <label for="{{button.sort}}" class="big-slider__button">{{button.name}}</label>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="email-input__container">
-      <input type="email" placeholder="Your email adress" class="email-input">
-      <button class="email-input__button"><fa-icon [icon]="faPlusIcon"></fa-icon></button>
-    </div>
-    <div class="socials">
-      <p class="socials__text">Find us here</p>
-      <a class="socials__link" href=""><fa-icon [icon]="faFacebookIcon"></fa-icon></a>
-      <a class="socials__link" href=""><fa-icon [icon]="faTwitterIcon"></fa-icon></a>
-      <a class="socials__link" href=""><fa-icon [icon]="faPinterestIcon"></fa-icon></a>
+    <div class="subscribe_container">
+      <span class="subscribe_text email_text">Stay updated</span>
+      <div class="email-input__container">
+        <input type="email" placeholder="Your email address" class="email-input">
+        <button class="email-input__button"><fa-icon [icon]="faPlusIcon"></fa-icon></button>
+      </div>
+      <div class="socials">
+        <p class="socials__text">Find us here</p>
+        <a class="socials__link" href=""><fa-icon [icon]="faFacebookIcon"></fa-icon></a>
+        <a class="socials__link" href=""><fa-icon [icon]="faTwitterIcon"></fa-icon></a>
+        <a class="socials__link" href=""><fa-icon [icon]="faPinterestIcon"></fa-icon></a>
+      </div>
     </div>
   </header>
   <main>
+    <img class="big_img" src="../../../assets/outfits.png" alt="">
+    <div class="dress_slider__menu">
+      <ul class="dress-filter__list">
+        <li class="dress-filter__item" *ngFor="let filter of filters" >
+          <input class="filter__radio" type="radio" name="filter_radio" id="{{filter.sort}}" [checked]="filter.checked">
+          <label for="{{filter.sort}}" class="filter__button">{{filter.name}}</label>
+        </li>
+      </ul>
+      <ul class="slider_btn-list">
+        <li class="slider_btn__item" *ngFor="let button of buttons" >
+          <input class="slider_btn__radio" type="radio" name="slider_btn_radio" id="{{button.sort}}" [checked]="button.checked">
+          <label for="{{button.sort}}" class="slider_btn__button">{{button.name}}</label>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
     <div class="dress_part">
       <button class="mobile-desktop__menu-btn resent__btn">
         <p class="mobile-desktop__menu-text">WHAT`S HOT?</p>
         <fa-icon class="mobile-desktop__menu-text mobile-desktop__menu-icon" [icon]="faCaretDownIcon"></fa-icon>
       </button>
       <div class="clothes__container">
-        <div class="clothes__item">
-          <img src="../../../assets/girl1.png" alt="">
-          <h3>MIMOSA DRESS</h3>
-          <h4>73.74$</h4>
-          <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon [icon]="faPlusIcon"></fa-icon></button>
+        <div class="clothes__item" *ngFor=" let position of positions">
+          <img class="clothes__item-img" src="{{position.img}}" alt="">
+          <h3>{{position.name}}</h3>
+          <h4>{{position.cost}}</h4>
+          <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
         </div>
       </div>
+      <div class="clear"></div>
+    </div>
+    <div class="c_container clothes__item_sail">
+      <img class="br_image" src="../../../assets/clearance.png" alt="">
+      <div class="clothes__item" *ngFor=" let position of positions">
+        <img class="clothes__item-img" src="{{position.img}}" alt="">
+        <h3>{{position.name}}</h3>
+        <h4>{{position.cost}}</h4>
+        <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="brands">
+      <h4 class="brand_icon__header">FAVOURITE BRANDS</h4>
+      <div class="brands-icons_container">
+        <img class="brand_icon" src="../../../assets/addict.png">
+        <img class="brand_icon" src="../../../assets/abandon.png">
+        <img class="brand_icon" src="../../../assets/adidas.png">
+        <img class="brand_icon" src="../../../assets/boy-london.png">
+        <img class="brand_icon" src="../../../assets/converse.png">
+        <img class="brand_icon" src="../../../assets/calvin.png">
+      </div>
+    </div>
+    <div class="about">
+      <h2 class="about_header">About LookShop</h2>
+      <p class="about_text">Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
+        Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
+        Some text Some text Some text Some text Some text Some text Some text Some text Some text </p>
     </div>
   </main>
 </div>

@@ -1,3 +1,6 @@
+.clear{
+  clear: both;
+}
 .home-page__container{
   text-align: center;
 }
@@ -19,9 +22,6 @@
   height: 3.8%;
   padding: 0 5%;
   align-items: center;
-}
-.slider-container{
-  width: 95.3%;
 }
 .shop_data__icon, .shop_data__text{
   font-family: Arial;
@@ -118,6 +118,9 @@
 /***********************************************************
                         MAIN
 ***********************************************************/
+.dress_slider__menu{
+  display: none;
+}
 .dress_part{
   background-color:  #fd926d;
   width: 100%;
@@ -128,11 +131,16 @@
 }
 .clothes__container{
   padding: 2%;
-  display: flex;
+  margin: 1px 0 0;
 }
 .clothes__item{
   background: #f7f7f7;
-  margin: auto;
+  margin: 0 1% 3%;
+  float: left;
+  width: 31.3%;
+}
+.clothes__item-img{
+  width: 100%;
 }
 .clothes__btn-text{
   font-size: 14px;
@@ -146,7 +154,7 @@
 }
 @media (min-width: 641px) {
   .home_header{
-    padding: 0 2%;
+    padding: 0;
   }
   .header_bucket-container{
     display: flex;
@@ -158,12 +166,21 @@
     position: absolute;
     right: 4.5%;
   }
+  .mobile-desktop__menu-btn{
+    margin: 0 2% 2% !important;
+    width: 96%;
+  }
   .logo-img{
     float: left;
     height: 4vh;
     width: auto;
     margin: 0;
+    padding-left: 15px;
   }
+  .br_image{
+    width: 100%;
+  }
+
   .shop_data{
     float: right;
     margin: 0 0 0 46.7%;
@@ -185,6 +202,172 @@
   }
   .shop_data *{
     font-size: 20px;
+  }
+  .subscribe_container{
+    display: flex;
+    background-color:  #ededed;
+    align-items: center;
+    padding: 0 2%;
+    height: 50px;
+    margin: 1% 0;
+    position: relative;
+  }
+  .subscribe_text{
+    color:  #6b6b6b;
+    font-size: 16px;
+    padding-right: 1%;
+  }
+  .email-input__container{
+    margin: 0;
+    height: 70%;
+  }
+  .email-input__button, .email-input{
+    font-size: 14px;
+  }
+  .email-input{
+    background: white;
+  }
+  .plus_icon{
+    float: left;
+    margin: 9px 0 14px 14px;
+    font-size: 20px;
+  }
+  .socials{
+    margin: 0;
+    width: 48%;
+    position: absolute;
+    right: 0;
+  }
+  .socials__text{
+    margin: 0;
+    font-size: 18px;
+    padding-right: 5%;
+  }
+  .socials > .socials__text{
+    text-align: left;
+    width: 101px;
+  }
+  .email_text{
+    width: 84px;
+  }
+  .socials__link{
+    width: 50px;
+    height: 29px;
+  }
+  .big_img{
+    width: 96%;
+    padding: 2.2% 2%;
+  }
+  .resent__btn{
+    display: none;
+  }
+  .dress-filter__list{
+    display: flex;
+    padding: 20px;
+  }
+  .dress_slider__menu{
+    display: block;
+    background: white;
+    margin-bottom: -2px;
+  }
+  .filter__radio, .slider_btn__radio{
+    display: none;
+  }
+  .slider_btn__radio{
+    background: #f2f2f2;
+  }
+  .filter__button{
+    padding: 22px;
+    color:  #555555;
+    font-size: 14px;
+  }
+  .filter__radio:checked ~ label, .slider_btn__radio:checked ~ label{
+    color: #fff;
+    background: #fd926d;
+  }
+  .dress-filter__list{
+    float: left;
+  }
+  .slider_btn-list{
+    float: right;
+    display: flex;
+    background: #d6d6d6;
+    font-size: 30px;
+    line-height: 0.5;
+    font-weight: bold;
+  }
+  .slider_btn__button{
+    display: flex;
+    padding: 22px;
+  }
+  .c_container{
+    position: relative;
+  }
+  .br_image{
+    z-index: 1;
+  }
+  .clothes__item_sail{
+    background: white;
+  }
+  .brands-icons_container{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(178, 178, 178, 0.5);
+    position: relative;
+    width: 100%;
+  }
+  .brand_icon__header{
+    font-family: Arial;
+    color:  #414141;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .brand_icon__header:before,
+  .brand_icon__header:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: rgba(178, 178, 178, 0.5);
+    z-index: -1;
+    position: relative;
+    vertical-align: middle;
+  }
+  .brand_icon__header:before {
+    right: 15px;
+    margin: 0 0 0 -100%;
+  }
+  .brand_icon__header:after {
+    left: 15px;
+    margin: 0 -100% 0 0;
+  }
+  .brand_icon{
+    height: 47px;
+    padding: 18px;
+  }
+  .about{
+    padding: 0 1%;
+  }
+  .about_header{
+    font-family: Arial;
+    color:  #414141;
+    font-size: 24px;
+    margin: 20px 0 0;
+  }
+  .about_text{
+    text-align: center;
+    font-family: Arial;
+    color:  #999999;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .clothes_button{
+    width: 163px;
   }
 }
 @media screen and (min-width: 641px){
