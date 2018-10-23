@@ -7,6 +7,7 @@ const appRoutes: Routes = [
   { path: '', component: pages.TitlePageComponent,
     children: [
       { path: 'home', component: pages.HomePageComponent },
+      { path: 'product', component: pages.ProductPageComponent },
       ]}
 ];
 

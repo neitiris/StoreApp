@@ -10,13 +10,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomePageComponent } from './pages';
 import { SliderComponent } from './components';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitlePageComponent,
     HomePageComponent,
-    SliderComponent
+    SliderComponent,
+    ProductPageComponent
   ],
   imports: [
     FontAwesomeModule,

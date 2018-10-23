@@ -243,6 +243,9 @@
   }
 }
 @media (min-width: 641px) {
+  .big_img, .email_text, .brands, .about{
+    display: block;
+  }
   .home_header{
     padding: 0;
   }
@@ -483,11 +486,15 @@
   }
 }
 @media screen and (min-width: 769px) {
-  .header_drop-menu {
+  .mobile-desktop__menu-btn{
+    display: none;
+  }
+  .header_drop-menu{
     position: absolute;
     right: 28%;
+    display: block;
   }
-  .head-drop_btn {
+  .head-drop_btn{
     background: none;
     border: none;
     cursor: pointer;
