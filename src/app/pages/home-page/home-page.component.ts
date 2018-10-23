@@ -14,7 +14,6 @@ import {faFacebookF, faPinterest, faTwitter} from '@fortawesome/fontawesome-free
 })
 export class HomePageComponent implements OnInit {
   faListIcon = faList;
-  faShoppingBagIcon = faShoppingBag;
   faPlusIcon = faPlus;
   faFacebookIcon = faFacebookF;
   faTwitterIcon = faTwitter;

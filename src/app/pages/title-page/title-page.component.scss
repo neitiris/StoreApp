@@ -23,12 +23,49 @@
   color: white;
   padding: 4px 1.9px;
 }
+.header_drop-menu {
+  display: none;
+}
 /***********************************************************
                           MAIN
 ***********************************************************/
-.main{
-
+.header_bucket-container{
+  text-align: center;
 }
+/****
+dropped
+*****/
+.logo-img{
+  width: 90%;
+  margin: auto;
+  padding: 2% 0;
+}
+.shop_data{
+  display: flex;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  background-color:  #fafafa;
+  width: 95.3%;
+  height: 3.8%;
+  padding: 0 5%;
+  align-items: center;
+  font-size: 24px;
+}
+.shop_data__icon, .shop_data__text{
+  font-family: Arial;
+  color: #949393;
+  font-size: 30px;
+  letter-spacing: -0.15px;
+  text-align: right;
+  margin: 5% 0;
+}
+.shop_data__text{
+  width: 100%;
+}.shop_data__text{
+   width: 100%;
+ }
+
+/*******/
 .both_nav{
   background-color:  #ededed;
   min-height:  280px;
@@ -182,6 +219,44 @@
   }
 }
 @media screen and (min-width: 641px) {
+  .bucket_selector{
+    width: 100%;
+    height: 30px;
+    color: gray;
+    border: 1px solid gainsboro;
+    margin-bottom: 3px;
+    background: white;
+  }
+  .logo-img{
+    float: left;
+    height: 4vh;
+    width: auto;
+    margin: 0;
+    padding-left: 15px;
+  }
+  .header_bucket-container{
+    display: flex;
+    align-items: center;
+    margin: 2% 0;
+    position: relative;
+  }
+  .bucket_container{
+    position: absolute;
+    right: 1.5%;
+  }
+  .shop_data{
+    float: right;
+    margin: 0 0 0 46.7%;
+    padding: 2%;
+    width: 100%;
+  }
+  .shop_data__text{
+    margin: 0;
+  }
+  .shop_data *{
+    font-size: 15px;
+    margin: 1%;
+  }
   .title-page__container{
     max-width: 768px;
   }
@@ -254,6 +329,17 @@
   }
 }
 @media screen and (min-width: 769px) {
+  .header_drop-menu {
+    position: absolute;
+    right: 230px;
+    display: block;
+  }
+  .head-drop_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
   .title-page__container{
     max-width: 1200px;
   }
@@ -281,13 +367,6 @@
     float: right;
     padding-right: 9.5%;
   }
-  //.footer-menu__button{
-  //  display: none;
-  //}
-  //.footer-menu__list{
-  //  display: flex;
-  //  padding-left: 9.5%;
-  //}
   .copyright{
     padding-right: 9.5%;
   }

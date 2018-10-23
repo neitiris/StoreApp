@@ -6,7 +6,6 @@ import {
   style,
   transition,
   trigger,
-  keyframes
 } from '@angular/animations';
 
 @Component({

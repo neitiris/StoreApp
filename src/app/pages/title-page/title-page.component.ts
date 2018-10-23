@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faList, faSearch, faUserAlt} from '@fortawesome/free-solid-svg-icons';
+import {faCaretDown, faList, faSearch, faShoppingBag, faUserAlt} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-title-page',
@@ -10,6 +10,8 @@ export class TitlePageComponent implements OnInit {
   faSearchIcon = faSearch;
   faHumanIcon = faUserAlt;
   faMenuIcon = faList;
+  faCaretDownIcon = faCaretDown;
+  faShoppingBagIcon = faShoppingBag;
   footer_list = [
     {href: '', text: 'Privacy and Cookies'},
     {href: '', text: 'Terms and Conditions'},
