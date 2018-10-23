@@ -25,14 +25,15 @@
     </button>
     <div class="slider-container">
       <app-slider [images]="image_array"></app-slider>
-      <div class="big-slider_items">
-        <ul class="big-slider-list">
-          <li class="big-slider__item" *ngFor="let button of big-slider_buttons" >
-            <input class="big-slider__radio" type="radio" name="big-slider_radio" id="{{button.sort}}" [checked]="button.checked">
-            <label for="{{button.sort}}" class="big-slider__button">{{button.name}}</label>
-          </li>
-        </ul>
-      </div>
+      <div class="clear"></div>
+      <!--<div class="big-slider_items">-->
+        <!--<ul class="big-slider-list">-->
+          <!--<li class="big-slider__item" *ngFor="let button of big-slider_buttons" >-->
+            <!--<input class="big-slider__radio" type="radio" name="big-slider_radio" id="{{button.sort}}" [checked]="button.checked">-->
+            <!--<label for="{{button.sort}}" class="big-slider__button">{{button.name}}</label>-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</div>-->
     </div>
     <div class="subscribe_container">
       <span class="subscribe_text email_text">Stay updated</span>
@@ -71,25 +72,30 @@
         <fa-icon class="mobile-desktop__menu-text mobile-desktop__menu-icon" [icon]="faCaretDownIcon"></fa-icon>
       </button>
       <div class="clothes__container">
-        <div class="clothes__item" *ngFor=" let position of positions">
-          <img class="clothes__item-img" src="{{position.img}}" alt="">
-          <h3>{{position.name}}</h3>
-          <h4>{{position.cost}}</h4>
-          <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
+        <div class="clothes_slider">
+          <div class="clothes__item" *ngFor=" let position of positions">
+            <img class="clothes__item-img" src="{{position.img}}" alt="">
+            <h3 class="dress_label">{{position.name}}</h3>
+            <h4 class="dress_price">{{position.cost}}</h4>
+            <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
+          </div>
         </div>
       </div>
       <div class="clear"></div>
     </div>
     <div class="c_container clothes__item_sail">
       <img class="br_image" src="../../../assets/clearance.png" alt="">
-      <div class="clothes__item" *ngFor=" let position of positions">
-        <img class="clothes__item-img" src="{{position.img}}" alt="">
-        <h3>{{position.name}}</h3>
-        <h4>{{position.cost}}</h4>
-        <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
+      <div class="clothes_slider clearance_clothes">
+        <div class="clothes__item" *ngFor=" let position of positions">
+          <img class="clothes__item-img" src="{{position.img}}" alt="">
+          <h3 class="dress_label">{{position.name}}</h3>
+          <h4 class="dress_price">{{position.cost}}</h4>
+          <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
+        </div>
       </div>
       <div class="clear"></div>
     </div>
+    <button class="more">LOAD MORE</button>
     <div class="brands">
       <h4 class="brand_icon__header">FAVOURITE BRANDS</h4>
       <div class="brands-icons_container">

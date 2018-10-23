@@ -37,14 +37,12 @@
   background-color:  #f7f7f7;
   width: 100%;
   height: 2.4%;
-  display: flex;
-  align-self: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
 }
 .payments_img{
-  align-self: center;
-  max-width: 50vw;
-  padding-left: 15px;
+  height: 14px;
+  padding-left: 0;
 }
 .both-list__container{
   width: 210px;
@@ -143,6 +141,18 @@
 /***********************************************************
                         @MEDIA
 ***********************************************************/
+@media screen and (min-width: 321px){
+  .payments_img{
+    align-self: center;
+    max-width: 50vw;
+    padding-left: 15px;
+  }
+  .payments_line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 321px) and (max-width: 640px) {
   .title-page__container{
     max-width: 640px;
@@ -159,7 +169,7 @@
     width: 100%;
   }
   .nav_both__container{
-    padding: 1.5% 8.5%;
+    padding: 1.5% 5%;
   }
   .both-list__container{}
 }
@@ -168,7 +178,7 @@
     padding: 1.5% 13.5%;
   }
   .both-list__container{
-    width: 211px;
+    width: 69%;
   }
 }
 @media screen and (min-width: 641px) {
@@ -205,13 +215,14 @@
     display: flex;
   }
   .both-list__container{
-    width: 68%;
+    width: 45%;
   }
   .both__title{
     font-size: 2vw;
   }
   .both_nav[_ngcontent-c1] {
-    min-height: 290px;
+    min-height: 300px;
+
   }
   .both_nav_item{
     line-height: 0.9;
@@ -221,6 +232,11 @@
   }
   .nav_both__container {
     padding: 2%;
+    display: flex;
+    justify-content: center;
+  }
+  .nav_both__content-container{
+    width: 95%;
   }
   .social_img{
     height: 40px;
@@ -228,20 +244,26 @@
     padding: 2px 3px;
   }
   .secure_img__container{
-    width: 20%;
+    width: 25%;
     float: left;
-    padding: 4% 2%;
+    padding: 4% 0 0 2%;
   }
   .secure_img {
     width: 100%;
     height: 50%;
   }
-  .both-list__container {
-    width: 50%;
-  }
 }
 @media screen and (min-width: 769px) {
-
+  .header_drop-menu{
+    position: absolute;
+    right: 28%;
+  }
+  .head-drop_btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
   .title-page__container{
     max-width: 1200px;
   }
@@ -280,7 +302,7 @@
     padding-right: 9.5%;
   }
   .both-list__container{
-    width: 55%;
+    width: 58%;
   }
   .nav_both__container{
     width: 100%;
@@ -301,7 +323,7 @@
     min-width: 160px;
   }
   .nav_both__container[_ngcontent-c1] {
-    padding: 1.5% 12%;
+    padding: 1.5% 8%;
   }
   .social_img{
     height: 34px;
@@ -310,11 +332,35 @@
   }
   .secure_img__container{
     width: 15%;
-    padding: 2% 3%;
+    padding: 0 3%;
   }
   .secure_img{
     width: 100%;
     height: 95%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1178px){
+  .both_nav {
+    height: 315px;
+  }
+  .both-list__container {
+    max-width: 42%;
+  }
+  .both_nav_item {
+    line-height: 1;
+  }
+  .both__title{
+    font-size: 14px;
+  }
+  .both_nav_link{
+    font-size: 12px;
+  }
+  .payments_line{
+    height: 12.4%;
+  }
+  .secure_img{
+    height: 75%;
+    padding: 20px;
   }
 }
 //@media screen and (max-width: 411px) and (max-width: ){

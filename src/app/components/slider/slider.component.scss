@@ -1,15 +1,13 @@
 #container{
   position: relative;
   overflow-x: hidden;
-  height: 438px;
 }
 #grid {
   display: grid;
-  height: 12%;
+  height: 100%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 350px;
   grid-column-gap: 20px;
-  width: 305%;
+  width: 306%;
 
 }
 .ng-star-inserted{
@@ -24,7 +22,7 @@
 
   position: absolute;
   z-index: 1000;
-  top: 160px;
+  top: calc(50% - 45px);
   float: left;
   cursor: pointer;
   font-size: 250%;
@@ -40,7 +38,7 @@
 
 #slider-buttons-right{
   position: absolute;
-  top: 160px;
+  top: calc(50% - 45px);
   z-index: 1000;
   float: right;
   cursor: pointer;
@@ -64,7 +62,7 @@
 }
 
 .image-cropper img {
-  height: 150%;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }

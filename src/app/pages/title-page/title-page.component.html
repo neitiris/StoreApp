@@ -17,26 +17,28 @@
         <img class="payments_img" src="../../../assets/payments.png" alt="">
       </div>
       <div class="nav_both__container">
-        <div class="both-list__container">
-          <ul class="both_nav_list" *ngFor="let list of lists">
-            <li class="both_nav_item" *ngFor="let item of list">
-              <h3 class="both__title" *ngIf="item.title">{{item.title}}</h3>
-              <a class="both_nav_link" href={{item.href}}>{{item.text}}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="socials">
-          <h3 class="both__title">Socials</h3>
-          <table>
-            <tr *ngFor="let social of socials">
-              <td><a href="{{social.href}}"><img class="social_img" src="{{social.img}}" alt=""></a></td>
-              <td><a href="{{social.href2}}"><img class="social_img" src="{{social.img2}}" alt=""></a></td>
-              <td><a href="{{social.href3}}"><img class="social_img" src="{{social.img3}}" alt=""></a></td>
-            </tr>
-          </table>
-        </div>
-        <div class="secure_img__container" >
-          <img class="secure_img"  src="../../../assets/secure.png" alt="">
+        <div class="nav_both__content-container">
+          <div class="both-list__container">
+            <ul class="both_nav_list" *ngFor="let list of lists">
+              <li class="both_nav_item" *ngFor="let item of list">
+                <h3 class="both__title" *ngIf="item.title">{{item.title}}</h3>
+                <a class="both_nav_link" href={{item.href}}>{{item.text}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="socials">
+            <h3 class="both__title">Socials</h3>
+            <table>
+              <tr *ngFor="let social of socials">
+                <td><a href="{{social.href}}"><img class="social_img" src="{{social.img}}" alt=""></a></td>
+                <td><a href="{{social.href2}}"><img class="social_img" src="{{social.img2}}" alt=""></a></td>
+                <td><a href="{{social.href3}}"><img class="social_img" src="{{social.img3}}" alt=""></a></td>
+              </tr>
+            </table>
+          </div>
+          <div class="secure_img__container" >
+            <img class="secure_img"  src="../../../assets/secure.png" alt="">
+          </div>
         </div>
       </div>
       <div class="clear"></div>
