@@ -55,6 +55,10 @@
             </ul>
           </li>
         </ul>
+        <app-price-slider></app-price-slider>
+        <div class="dress-size__filter">
+          <label *ngFor="let size of sizeList" class="radio_label" for="size.radio" >XS <input class="hidden" name="size-filter-radio" type="radio" id="size-radio0" [checked]="size.checked"></label>
+        </div>
       </div>
     </div>
   </main>

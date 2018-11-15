@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faHome, faPlus, faSquareFull} from '@fortawesome/free-solid-svg-icons';
+import {SIZE_LIST} from '../../../Shared/mock-data';
 
 @Component({
   selector: 'app-product-page',
@@ -10,6 +11,7 @@ export class ProductPageComponent implements OnInit {
   home_icon = faHome;
   faPlusIcon = faPlus;
   squareFullIcon = faSquareFull;
+  sizeList = SIZE_LIST;
   linkList = [
     {href: '', name: 'Women'},
     {href: '', name: 'Clothes'},
