@@ -1,0 +1,66 @@
+<div class="products__container">
+<header>
+  <div class="link-chain">
+    <ul class="link-chain__list">
+      <li class="link-chain__item">
+        <a class="link-chain__link" href="/home"><fa-icon [icon]="home_icon"></fa-icon></a>
+      </li>
+      <li class="link-chain__item" *ngFor="let link of linkList">
+        <span class="quote_item">></span>
+        <a class="link-chain__link" href="link.href">{{link.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="div__slider">
+    <app-slider [images]="items"></app-slider>
+  </div>
+</header>
+  <main class="main">
+    <div class="dress_container">
+      <div class="filters_line">
+        <div class="sort">
+          <p class="sort_text">Sort by</p>
+          <select class="sort_select" name="" id="">
+            <option value="">Date</option>
+            <option value="">Price</option>
+          </select>
+        </div>
+        <div class="page_num">
+          <ul class="page_num__list">
+            <li class="page_num__item"><a class="page_num__link" href="">1</a></li>
+            <li class="page_num__item"><a class="page_num__link" href="">2</a></li>
+            <li class="page_num__item"><a class="page_num__link" href="">3</a></li>
+            <li class="page_num__item"><a class="page_num__link" href="">></a></li>
+          </ul>
+        </div>
+      </div>
+        <div class="dress_items__container">
+          <div class="clothes__item" *ngFor=" let position of positions">
+            <img class="clothes__item-img" src="{{position.img}}" alt="">
+            <h3 class="dress_label">{{position.name}}</h3>
+            <h4 class="dress_price">{{position.cost}}</h4>
+            <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
+          </div>
+        </div>
+    </div>
+    <div class="filter_aside">
+      <div class="filter__block">
+        <ul class="sidebar-nav-ul">
+          <li class="head-li">CATEGORIES</li>
+          <li *ngFor="let menuItem of menuItems">
+            <span class="showed" (click)="menuClicked(menuItem)"><span><i class="{{menuItem.icon}}"></i>{{menuItem.title}}</span></span>
+            <ul [ngStyle]="{'height': menuItem.opened ? 25 * menuItem.innerItems.length + 'px' : 0}" class="menu-children-container">
+              <li *ngFor="let listChildren of menuItem.innerItems" (click)="menuChildClicked(listChildren)">
+                <fa-icon class="sidebar_square" [icon]="squareFullIcon"></fa-icon><a class="list-children__link" href="#">{{listChildren.title}}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <app-price-slider></app-price-slider>
+        <div class="dress-size__filter">
+          <label *ngFor="let size of sizeList" class="radio_label" for="size.radio" >XS <input class="hidden" name="size-filter-radio" type="radio" id="size-radio0" [checked]="size.checked"></label>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+

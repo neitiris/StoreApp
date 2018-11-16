@@ -1,0 +1,180 @@
+/***********************************************************
+                  GENERAL
+***********************************************************/
+.main{
+  display: flex;
+}
+.hidden{
+  display: none;
+}
+.link-chain__list{
+  display: flex;
+  width: 100%;
+  padding: 2px 0;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+.link-chain__item{
+}
+.quote_item{
+  margin: 0 5px;
+}
+.link-chain__link, .quote_item{
+  text-decoration: none;
+  font-family: Arial;
+  color:  #7a706d;
+  font-size: 11px;
+  cursor: pointer;
+}
+.div__slider{
+  height: 420px;
+  width: 100%;
+  background: gray;
+  border-bottom: 1px solid #d6d6d6;
+}
+.clothes__item{
+  background: #f7f7f7;
+  margin: 3% 0 3% 3%;
+  float: left;
+  width: calc(19vw - 5.2%);
+  text-align: center;
+}
+.clothes__item-img{
+  width: 100%;
+}
+.clothes__btn-text{
+  font-size: 14px;
+  float: left;
+}
+.clothes_button{
+  width: 163px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10%;
+  background-color: #fd926d;
+  box-shadow: inset 0 -8px 0 0 #dd6b44;
+  border: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+}
+.plus_icon[_ngcontent-c2] {
+  float: left;
+  margin: 9px 0 14px 14px;
+  font-size: 20px;
+}
+.dress_label{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.dress_price{
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.dress_container{
+  width: 79%;
+  float: left;
+  border: 1px solid lightslategrey;
+}
+.sort, .page_num__list{
+  display: flex;
+}
+.sort{
+  float: left;
+}
+.sort_text{
+  margin: 0 10px 0 0;
+}
+.page_num{
+  float: right;
+}
+.page_num__link{
+  padding: 11px 15px;
+  margin: 0 2px;
+  background: #f4f4f4;
+  text-decoration: none;
+}
+.page_num__link:first-child{
+    background: #e5e5e5;
+}
+.filters_line{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d6d6d6;
+}
+/****
+SIDEBAR
+**/
+.sidebar_square{
+  color: orange;
+  font-size: 8px;
+  margin-right: 4px;
+  display: inline-flex;
+}
+.head-li{
+  background: #1a2226;
+  width: auto;
+  padding: 10px 25px 10px 15px;
+  font-size: 12px;
+  margin-bottom: 10px !important;
+  color: white !important;
+}
+.sidebar-nav-ul{
+  margin-top: 10px;
+}
+.showed{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.showed span{
+  display: inline-flex;
+  width: 100%;
+}
+.showed span i {
+  padding-right: 8px;
+}
+.sidebar-nav-ul > li > ul > li{
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-left: 15px;
+}
+.sidebar-nav-ul > li {
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 5px;
+  color: #727272;
+}
+.list-children__link{
+  text-decoration: none;
+  color: #727272;
+}
+.menu-children-container {
+  padding: 0;
+  transition: height .3s ease;
+  height: 0;
+  overflow: hidden;
+}
+.filter_aside{
+  padding-left: 20px;
+  width: 230px;
+}
+.dress-size__filter{
+  width: 100%;
+  display: flex;
+}
+.radio_label{
+  height: 30px;
+  width: 30px;
+  float: left;
+  margin: 0 2px;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio_label .filter__radio:checked{
+  background: darkorange;
+}
