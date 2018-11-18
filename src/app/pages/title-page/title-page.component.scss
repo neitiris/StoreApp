@@ -29,7 +29,9 @@
 /***********************************************************
                           MAIN
 ***********************************************************/
-.header_bucket-container{
+.header_bucket-container {
+  width: 85%;
+  margin: auto !important;
   text-align: center;
 }
 /****
@@ -232,7 +234,6 @@ dropped
     height: 4vh;
     width: auto;
     margin: 0;
-    padding-left: 15px;
   }
   .header_bucket-container{
     display: flex;
@@ -242,7 +243,7 @@ dropped
   }
   .bucket_container{
     position: absolute;
-    right: 1.5%;
+    right: 0;
   }
   .shop_data{
     float: right;

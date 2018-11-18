@@ -1,6 +1,10 @@
 /***********************************************************
                   GENERAL
 ***********************************************************/
+.header_bucket-container, .products__container{
+  width: 85%;
+  margin: auto;
+}
 .main{
   display: flex;
 }
@@ -34,9 +38,9 @@
 }
 .clothes__item{
   background: #f7f7f7;
-  margin: 3% 0 3% 3%;
+  margin: 3% 0 3% 1.3%;
   float: left;
-  width: calc(19vw - 5.2%);
+  width: 32%;
   text-align: center;
 }
 .clothes__item-img{
@@ -75,7 +79,6 @@
 .dress_container{
   width: 79%;
   float: left;
-  border: 1px solid lightslategrey;
 }
 .sort, .page_num__list{
   display: flex;
@@ -164,6 +167,10 @@ SIDEBAR
 .dress-size__filter{
   width: 100%;
   display: flex;
+  margin-bottom: 30px;
+}
+.dress-size__filter > ul{
+  display: flex;
 }
 .radio_label{
   height: 30px;
@@ -175,6 +182,25 @@ SIDEBAR
   justify-content: center;
   align-items: center;
 }
-.radio_label .filter__radio:checked{
-  background: darkorange;
+.filter__radio:checked~label{background:#97b3ce; color:#fff; border-radius: 15px;}
+.filter__radio[type="radio"]{display:none}
+.sale_dress__img{
+  float: left;
+  margin-right: 10px;
+}
+.dress_list__item{
+  height: 100px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 10px;
+}
+.dress_sale__label{
+  color:  #5e5e5e;
+  font-size: 12px;
+  margin-top: 0;
+}
+.dress_sale__price{
+  color:  #fd926d;
+  font-size: 16px;
+  font-weight: 700;
 }

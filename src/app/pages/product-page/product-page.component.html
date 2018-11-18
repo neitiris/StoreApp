@@ -57,7 +57,32 @@
         </ul>
         <app-price-slider></app-price-slider>
         <div class="dress-size__filter">
-          <label *ngFor="let size of sizeList" class="radio_label" for="size.radio" >XS <input class="hidden" name="size-filter-radio" type="radio" id="size-radio0" [checked]="size.checked"></label>
+          <ul>
+            <li *ngFor="let size of sizeList">
+              <label class="radio_label" for="{{size.radio}}" >{{size.name}}</label>
+              <input class="hidden" name="size-filter-radio" type="radio" id="{{size.radio}}" [checked]="size.checked">
+            </li>
+          </ul>
+        </div>
+        <div class="sale__block">
+          <ul class="dress__list">
+            <li class="head-li">ON SALE</li>
+            <li class="dress_list__item" *ngFor="let dress of sale_dresses">
+              <img class="sale_dress__img" src="{{dress.img}}" alt="">
+              <h3 class="dress_sale__label">{{dress.name}}</h3>
+              <span class="dress_sale__price">{{dress.price}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="featured__block">
+          <ul class="dress__list">
+            <li class="head-li">FEATURED PRODUCTS</li>
+            <li class="dress_list__item" *ngFor="let dress of featured_dresses">
+              <img class="sale_dress__img" src="{{dress.img}}" alt="">
+              <h3 class="dress_sale__label">{{dress.name}}</h3>
+              <span class="dress_sale__price">{{dress.price}}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
