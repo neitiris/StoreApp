@@ -38,7 +38,7 @@
 }
 .clothes__item{
   background: #f7f7f7;
-  margin: 3% 0 3% 1.3%;
+  margin: 0 0 3% 1.3%;
   float: left;
   width: 32%;
   text-align: center;
@@ -92,14 +92,22 @@
 .page_num{
   float: right;
 }
-.page_num__link{
+.page_num__item{
   padding: 11px 15px;
   margin: 0 2px;
   background: #f4f4f4;
+}
+.page_num__link{
   text-decoration: none;
 }
-.page_num__link:first-child{
-    background: #e5e5e5;
+//.page_num__link:first-child{
+//    background: #e5e5e5;
+//}
+.pages_line{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 20px;
 }
 .filters_line{
   height: 40px;
