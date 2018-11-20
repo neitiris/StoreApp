@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faHome, faPlus, faSquareFull} from '@fortawesome/free-solid-svg-icons';
-import {SIZE_LIST, FEATURED_DRESSES, SALE_DRESSES} from '../../../Shared/mock-data';
+import {SIZE_LIST, FEATURED_DRESSES, LIST_DRESSES, SALE_DRESSES} from '../../../Shared/mock-data';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-product-page',
@@ -14,6 +15,12 @@ export class ProductPageComponent implements OnInit {
   sizeList = SIZE_LIST;
   sale_dresses = SALE_DRESSES;
   featured_dresses = FEATURED_DRESSES;
+  list_dress = LIST_DRESSES;
+  dressFiltered = [];
+  dressFilteredNSorted = [];
+  filterOption = 'S';
+  sortOption = 'date';
+  dress = LIST_DRESSES;
   linkList = [
     {href: '', name: 'Women'},
     {href: '', name: 'Clothes'},
@@ -41,6 +48,7 @@ export class ProductPageComponent implements OnInit {
 
   ngOnInit() {
     this.populateMenu();
+    this.filterDressBy(this.filterOption);
   }
   private populateMenu() {
     if (this.menuItems.length) {
@@ -75,4 +83,44 @@ export class ProductPageComponent implements OnInit {
       this.menuItems.forEach((m: any) => item.id === m.id ? m.opened = !m.opened :  m.opened = false);
     }
   }
+  public filterDressBy(param: string) {
+    if (param) {
+      this.filterOption = param;
+      switch (param) {
+        case 'XS':
+          this.dressFiltered = _.filter(this.dress, (d) => d.size === 'xs');
+          break;
+        case 'S':
+          this.dressFiltered = _.filter(this.dress, (d) => d.size === 's');
+          break;
+        case 'M':
+          this.dressFiltered = _.filter(this.dress, (d) => d.size === 'm');
+          break;
+        case 'L':
+          this.dressFiltered = _.filter(this.dress, (d) => d.size === 'l');
+          break;
+        case 'XL':
+          this.dressFiltered = _.filter(this.dress, (d) => d.size === 'xl');
+          break;
+      }
+      this.sortDressBy(this.sortOption);
+    }
+  }
+  public sortDressBy (sort?: string) {
+    if (sort) {
+      this.sortOption = sort;
+      console.log(sort);
+      switch (sort) {
+        case 'date':
+          this.dressFilteredNSorted = _.orderBy(this.dressFiltered, ['createdAt']);
+          break;
+        case 'price':
+          console.log(this.dressFilteredNSorted);
+          this.dressFilteredNSorted = _.sortBy(this.dressFiltered, (d) => d.price);
+          console.log(this.dressFilteredNSorted);
+          break;
+      }
+    }
+  }
 }
+

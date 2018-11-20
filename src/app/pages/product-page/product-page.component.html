@@ -12,7 +12,7 @@
     </ul>
   </div>
   <div class="div__slider">
-    <app-slider [images]="items"></app-slider>
+    <app-slider [images]=""></app-slider>
   </div>
 </header>
   <main class="main">
@@ -20,9 +20,9 @@
       <div class="filters_line">
         <div class="sort">
           <p class="sort_text">Sort by</p>
-          <select class="sort_select" name="" id="">
-            <option value="">Date</option>
-            <option value="">Price</option>
+          <select class="sort_select"  (change)="sortDressBy($event.target.value)">
+            <option id="date" value="date">Date</option>
+            <option id="price" value="price">Price</option>
           </select>
         </div>
         <div class="page_num">
@@ -35,10 +35,11 @@
         </div>
       </div>
         <div class="dress_items__container">
-          <div class="clothes__item" *ngFor=" let position of positions">
+          <div class="clothes__item" *ngFor=" let position of dressFilteredNSorted">
             <img class="clothes__item-img" src="{{position.img}}" alt="">
             <h3 class="dress_label">{{position.name}}</h3>
-            <h4 class="dress_price">{{position.cost}}</h4>
+            <h4 class="dress_price">{{position.price}}</h4>
+            <h4 class="dress_price">{{position.size}}</h4>
             <button class="email-input__button clothes_button"><p class="clothes__btn-text">ADD TO CART</p><fa-icon class="plus_icon" [icon]="faPlusIcon"></fa-icon></button>
           </div>
         </div>
@@ -68,7 +69,7 @@
         <app-price-slider></app-price-slider>
         <div class="dress-size__filter">
           <ul>
-            <li *ngFor="let size of sizeList">
+            <li *ngFor="let size of sizeList" (click)="filterDressBy(size.name)">
               <label class="radio_label" for="{{size.radio}}" >{{size.name}}</label>
               <input class="hidden" name="size-filter-radio" type="radio" id="{{size.radio}}" [checked]="size.checked">
             </li>
