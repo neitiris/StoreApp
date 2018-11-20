@@ -35,7 +35,7 @@
         </div>
       </div>
         <div class="dress_items__container">
-          <div class="clothes__item" *ngFor=" let position of dressFilteredNSorted">
+          <div class="clothes__item" *ngFor=" let position of dressFilteredNSortedNPriced">
             <img class="clothes__item-img" src="{{position.img}}" alt="">
             <h3 class="dress_label">{{position.name}}</h3>
             <h4 class="dress_price">{{position.price}}</h4>
@@ -61,12 +61,12 @@
           <li *ngFor="let menuItem of menuItems">
             <span class="showed" (click)="menuClicked(menuItem)"><span><i class="{{menuItem.icon}}"></i>{{menuItem.title}}</span></span>
             <ul [ngStyle]="{'height': menuItem.opened ? 25 * menuItem.innerItems.length + 'px' : 0}" class="menu-children-container">
-              <li *ngFor="let listChildren of menuItem.innerItems" (click)="menuChildClicked(listChildren)">
+              <li *ngFor="let listChildren of menuItem.innerItems">
                 <fa-icon class="sidebar_square" [icon]="squareFullIcon"></fa-icon><a class="list-children__link" href="#">{{listChildren.title}}</a></li>
             </ul>
           </li>
         </ul>
-        <app-price-slider></app-price-slider>
+        <app-price-slider (getMin)= "getMinRange($event)" (getMax)="getMaxRange($event)"></app-price-slider>
         <div class="dress-size__filter">
           <ul>
             <li *ngFor="let size of sizeList" (click)="filterDressBy(size.name)">

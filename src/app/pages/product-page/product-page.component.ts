@@ -18,9 +18,12 @@ export class ProductPageComponent implements OnInit {
   list_dress = LIST_DRESSES;
   dressFiltered = [];
   dressFilteredNSorted = [];
+  dressFilteredNSortedNPriced = [];
   filterOption = 'S';
   sortOption = 'date';
   dress = LIST_DRESSES;
+  minPriceRange: number;
+  maxPriceRange: number;
   linkList = [
     {href: '', name: 'Women'},
     {href: '', name: 'Clothes'},
@@ -120,6 +123,20 @@ export class ProductPageComponent implements OnInit {
           console.log(this.dressFilteredNSorted);
           break;
       }
+    }
+    this.getRange(this.minPriceRange, this.maxPriceRange);
+  }
+  public getMinRange(minRange) {
+    this.minPriceRange = minRange;
+  }
+  public getMaxRange(maxRange) {
+    this.maxPriceRange = maxRange;
+    this.getRange(this.minPriceRange, this.maxPriceRange );
+  }
+  public getRange(minPrice, maxPrice) {
+    if ( this.maxPriceRange) {
+      this.dressFilteredNSortedNPriced = _.filter(this.dressFilteredNSorted, (d) => minPrice < d.price && d.price < maxPrice);
+      console.log('minPrice', minPrice, 'maxPrice', maxPrice );
     }
   }
 }
